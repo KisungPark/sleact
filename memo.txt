@@ -1,0 +1,39 @@
+https://docs.nestjs.com/ 볼 것
+
+npm i -g @nestjs/cli
+
+nest new nest(폴더명)
+
+nest/tscofnig.js 수정
+{
+"compilerOptions": {
+...,
+"esModuleInterop":true
+}
+}
+기능: import \* as React from 'react'; -> import React from 'react';
+
+cd nest
+npm run start
+브라우저 > localhost:3000 : Hello World! 출력됨
+
+.vscode > setting.json 수정(.eslintrc.js를 읽을 수 없다고 할 때)
+{
+"eslint.workingDirectories": ["./nest", "./back", "./front"]
+}
+
+hot reload 적용
+https://docs.nestjs.com/recipes/hot-reload#hot-reload
+
+[eslint] Require statement not part of import statement. eslint@typescript-eslint/no-var-requires 발생 시
+.eslintrc.js
+module.exports = {
+  ...,
+  rules: {
+    ...,
+    '@typescript-eslint/no-var-requires': 0,
+  },
+};
+
+[eslint] Delete 'cr' [prettier/prettier] 발생 시
+vscode 하단의 CRLF를 LF로 변경
